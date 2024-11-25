@@ -1,8 +1,10 @@
+# This module is used define the ML/DL model parameters
+
 AUGMENTATION: True
 IMAGE_SIZE: [224, 224, 3] # as per VGG 16 model
 BATCH_SIZE: 16
-INCLUDE_TOP: False
+INCLUDE_TOP: False  #Do not want to train ffrom scratch
 EPOCHS: 1
-CLASSES: 2
-WEIGHTS: imagenet
+CLASSES: 2 #Healthy and Diseased
+WEIGHTS: imagenet #Classification model trained on imagenet dataset
 LEARNING_RATE: 0.01
