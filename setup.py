@@ -3,14 +3,12 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
-
 __version__ = "0.0.0"
 
-REPO_NAME = "Chicken-Disease-Classification--Project"
+REPO_NAME = "dlproj-chicken-disease-classification"  # Update this to match your actual repo name
 AUTHOR_USER_NAME = "DeekshithP22-AI"
 SRC_REPO = "cnnClassifier"
 AUTHOR_EMAIL = "deekshithwork22@gmail.com"
-
 
 setuptools.setup(
     name=SRC_REPO,
@@ -19,7 +17,7 @@ setuptools.setup(
     author_email=AUTHOR_EMAIL,
     description="A small python package for CNN app",
     long_description=long_description,
-    long_description_content="text/markdown",
+    long_description_content_type="text/markdown",  # Fix: Added _type
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
     project_urls={
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",

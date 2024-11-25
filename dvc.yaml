@@ -1,3 +1,5 @@
+# DVC runs and tracks each stage, when called mutiple times only if there are chnages in a particular pipeline/stage it runs that stage again skips otherwise
+
 stages:
   data_ingestion:
     cmd: python src/cnnClassifier/pipeline/stage_01_data_ingestion.py
@@ -38,7 +40,7 @@ stages:
       - BATCH_SIZE
       - AUGMENTATION
     outs:
-      - artifacts/training/model.h5
+      - artifacts/training/model.keras
 
 
   
@@ -49,7 +51,7 @@ stages:
       - src/cnnClassifier/pipeline/stage_04_evaluation.py
       - config/config.yaml
       - artifacts/data_ingestion/Chicken-fecal-images
-      - artifacts/training/model.h5
+      - artifacts/training/model.keras
     params:
       - IMAGE_SIZE
       - BATCH_SIZE
