@@ -1,3 +1,5 @@
+# This entity module is  for defining custom return types
+
 from dataclasses import dataclass
 from pathlib import Path
 
